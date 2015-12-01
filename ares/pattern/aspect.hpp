@@ -43,7 +43,7 @@ namespace aspect
         {
             aspect.Before(std::forward<Args>(args)...);
             VoidInvoke(std::forward<Args>(args)..., std::forward<Tail>(tail)...);
-            aspect.After(std::forward<Args>(args)..., ret);
+            aspect.After(std::forward<Args>(args)...);
         }
 
     private:
